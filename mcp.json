@@ -1,0 +1,51 @@
+{
+  "mcpServers": {
+    "william-herschel-ai": {
+      "command": "cargo",
+      "args": [
+        "run",
+        "--release",
+        "--quiet"
+      ],
+      "env": {
+        "RUST_LOG": "info",
+        "TITAN_PROTOCOL": "HERSCHEL",
+        "TARGET_CHAIN": "Sui",
+        "FIPS_203_LEVEL": "ML-KEM-768",
+        "FIPS_204_LEVEL": "ML-DSA-65"
+      },
+      "tools": [
+        {
+          "name": "measure_calorimetric_infrared_heating",
+          "description": "Demonstrates thermometer temperature rise beyond the red end of prism optical spectrum",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "dispersion_band_mm": {
+                "type": "number"
+              }
+            },
+            "required": [
+              "dispersion_band_mm"
+            ]
+          }
+        },
+        {
+          "name": "solve_uranus_orbital_elements",
+          "description": "Computes semi-major axis (19.2 AU) and 84-year orbital period for planetary discovery",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "epoch_year": {
+                "type": "number"
+              }
+            },
+            "required": [
+              "epoch_year"
+            ]
+          }
+        }
+      ]
+    }
+  }
+}
